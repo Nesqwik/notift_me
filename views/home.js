@@ -9,23 +9,15 @@ module.exports = (data, counter) => {
         "crossAxisAlignment": "center",
         "children": [
             {
-                "type": "view",
-                "name": "counter",
-                "coll": "counter",
-                "query": {
-                    "user": "@me"
-                },
-                "props": { text: "My personnal counter" }
+                "type": "button",
+                "text": "Notify Me !",
+                "onPressed": {
+                    "action": "notify",
+                    "props": {
+                        "user": ["@me"]
+                    }
+                }
             },
-            {
-                "type": "view",
-                "name": "counter",
-                "coll": "counter",
-                "query": {
-                    "user": "global"
-                },
-                "props": { text: "The common counter" }
-            }
         ]
     }
 }

@@ -17,6 +17,9 @@ module.exports = {
     },
     executeQuery(api, coll, query) {
         return axios.post(`${api.url}/app/colls/${coll}/docs/find`, query, options(api));
+    },
+    notify(api, title, message, to) {
+        return axios.post(`${api.url}/app/notify`, { "title": title, "message": message, "to": to }, options(api));
     }
 }
 
