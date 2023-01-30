@@ -14,7 +14,7 @@ module.exports = (data, counter) => {
                 "onPressed": {
                     "action": "notify",
                     "props": {
-                        "user": ["@me"]
+                        "users": ["@me"]
                     }
                 }
             },
